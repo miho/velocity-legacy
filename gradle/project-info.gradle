@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 ext.publishing.artifactId =  project.name.toLowerCase()
 ext.publishing.groupId    =  'eu.mihosoft.ext.velocity.legacy'
-ext.publishing.versionId  =  '1.7.0'
+ext.publishing.versionId  =  '1.7.1'
 
 ext.publishing.developerName         = 'Apache (published by Michael Hoffer)'
 ext.publishing.developerAlias        = 'miho'
