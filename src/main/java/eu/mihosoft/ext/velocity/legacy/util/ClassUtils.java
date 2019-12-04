@@ -62,24 +62,24 @@ public class ClassUtils {
      */
     public static Class getClass(String clazz) throws ClassNotFoundException
     {
-        /**
-         * Use the Thread context classloader if possible
-         */
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
-        if (loader != null)
-        {
-            try
-            {
-                return Class.forName(clazz, true, loader);
-            }
-            catch (ClassNotFoundException E)
-            {
-                /**
-                 * If not found with ThreadContext loader, fall thru to
-                 * try System classloader below (works around bug in ant).
-                 */
-            }
-        }
+        // /**
+        //  * Use the Thread context classloader if possible
+        //  */
+        // ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        // if (loader != null)
+        // {
+        //     try
+        //     {
+        //         return Class.forName(clazz, true, loader);
+        //     }
+        //     catch (ClassNotFoundException E)
+        //     {
+        //         /**
+        //          * If not found with ThreadContext loader, fall thru to
+        //          * try System classloader below (works around bug in ant).
+        //          */
+        //     }
+        // }
         /**
          * Thread context classloader isn't working out, so use system loader.
          */

@@ -688,52 +688,45 @@ public class RuntimeInstance implements RuntimeConstants, RuntimeServices
 
         if (rm != null && rm.length() > 0)
         {
-        //     /*
-        //      *  if something was specified, then make one.
-        //      *  if that isn't a ResourceManager, consider
-        //      *  this a huge error and throw
-        //      */
+            /*
+             *  if something was specified, then make one.
+             *  if that isn't a ResourceManager, consider
+             *  this a huge error and throw
+             */
 
-        //     Object o = null;
+            Object o = null;
 
-        //     try
-        //     {
-        //        o = ClassUtils.getNewInstance( rm );
-        //     }
-        //     catch (ClassNotFoundException cnfe )
-        //     {
-        //         String err = "The specified class for ResourceManager (" + rm
-        //             + ") does not exist or is not accessible to the current classloader.";
-        //         log.error(err);
-        //         throw new VelocityException(err, cnfe);
-        //     }
-        //     catch (InstantiationException ie)
-        //     {
-        //       throw new VelocityException("Could not instantiate class '" + rm + "'", ie);
-        //     }
-        //     catch (IllegalAccessException ae)
-        //     {
-        //       throw new VelocityException("Cannot access class '" + rm + "'", ae);
-        //     }
+            try
+            {
+               o = ClassUtils.getNewInstance( rm );
+            }
+            catch (ClassNotFoundException cnfe )
+            {
+                String err = "The specified class for ResourceManager (" + rm
+                    + ") does not exist or is not accessible to the current classloader.";
+                log.error(err);
+                throw new VelocityException(err, cnfe);
+            }
+            catch (InstantiationException ie)
+            {
+              throw new VelocityException("Could not instantiate class '" + rm + "'", ie);
+            }
+            catch (IllegalAccessException ae)
+            {
+              throw new VelocityException("Cannot access class '" + rm + "'", ae);
+            }
 
-            // if (!(o instanceof ResourceManager))
-            // {
-            //     String err = "The specified class for ResourceManager (" + rm
-            //         + ") does not implement " + ResourceManager.class.getName()
-            //         + "; Velocity is not initialized correctly.";
+            if (!(o instanceof ResourceManager))
+            {
+                String err = "The specified class for ResourceManager (" + rm
+                    + ") does not implement " + ResourceManager.class.getName()
+                    + "; Velocity is not initialized correctly.";
 
-            //     log.error(err);
-            //     throw new VelocityException(err);
-            // }
+                log.error(err);
+                throw new VelocityException(err);
+            }
 
-            // resourceManager = (ResourceManager) o;
-
-            String warn = "Cannot load resource manager '" + rm + "'. Using default implementation instead.";
-            log.warn(warn);    
-
-            resourceManager = new ResourceManagerImpl();
-
-            resourceManager.initialize(this);
+            resourceManager = (ResourceManager) o;
          }
          else
          {
