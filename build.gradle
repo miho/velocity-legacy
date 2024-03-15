@@ -10,7 +10,6 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
     id 'maven-publish'
-    id 'com.jfrog.bintray' version '1.8.4'
 }
 
 apply from: 'gradle/publishing.gradle'
@@ -27,7 +26,6 @@ tasks.withType(Javadoc) {
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
     mavenCentral()
 }
 
@@ -39,7 +37,6 @@ dependencies {
     implementation 'commons-collections:commons-collections:3.2.1'
     implementation 'commons-lang:commons-lang:2.4'
     implementation 'oro:oro:2.0.8'
-    implementation 'jdom:jdom:1.1'
     implementation 'commons-logging:commons-logging:1.1'
     implementation 'log4j:log4j:1.2.12'
     implementation 'javax.servlet:servlet-api:2.3'

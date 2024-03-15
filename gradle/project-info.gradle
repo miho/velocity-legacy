@@ -1,25 +1,23 @@
 // -----------------------------------------------------------------------------
 // publishing information
 // -----------------------------------------------------------------------------
-ext.publishing.artifactId =  project.name.toLowerCase()
-ext.publishing.groupId    =  'eu.mihosoft.ext.velocity.legacy'
-ext.publishing.versionId  =  '1.7.4'
+ext.publishingInfo.artifactId =  project.name.toLowerCase()
+ext.publishingInfo.groupId    =  'eu.mihosoft.ext.velocity.legacy'
+ext.publishingInfo.versionId  =  '1.7.5'
 
-ext.publishing.developerName         = 'Apache (published by Michael Hoffer)'
-ext.publishing.developerAlias        = 'miho'
-ext.publishing.developerEmail        = 'info@michaelhoffer.de'
-ext.publishing.inceptionYear         = '2019'
+ext.publishingInfo.developerName         = 'Apache (published by Michael Hoffer)'
+ext.publishingInfo.developerAlias        = 'miho'
+ext.publishingInfo.developerEmail        = 'info@michaelhoffer.de'
+ext.publishingInfo.inceptionYear         = '2019'
 
-ext.publishing.bintray.repo          = 'Ext'
-ext.publishing.bintray.userOrg       = 'miho'
-ext.publishing.bintray.name          = project.name
+ext.publishingInfo.desc                  = 'Legacy version of Apache velocity'
+ext.publishingInfo.license               = 'Apache-2.0'
+ext.publishingInfo.licenseUrl            = 'https://github.com/miho/velocity-legacy/blob/master/LICENSE'
+ext.publishingInfo.labels                = ['velocity', 'legacy', 'apache', 'template engine']
+ext.publishingInfo.websiteUrl            = 'https://github.com/miho/velocity-legacy'
+ext.publishingInfo.issueTrackerUrl       = 'https://github.com/miho/velocity-legacy/issues'
+ext.publishingInfo.vcsUrl                = 'https://github.com/miho/velocity-legacy.git'
 
-ext.publishing.desc                  = 'Legacy version of Apache velocity'
-ext.publishing.license               = 'Apache-2.0'
-ext.publishing.licenseUrl            = 'https://github.com/miho/velocity-legacy/blob/master/LICENSE'
-ext.publishing.labels                = ['velocity', 'legacy', 'apache', 'template engine']
-ext.publishing.websiteUrl            = 'https://github.com/miho/velocity-legacy'
-ext.publishing.issueTrackerUrl       = 'https://github.com/miho/velocity-legacy/issues'
-ext.publishing.vcsUrl                = 'https://github.com/miho/velocity-legacy.git'
+ext.publishingInfo.gitHubMavenRepo       = "https://maven.pkg.github.com/miho/velocity-legacy"
 
-ext.publishing.pomName               =  ext.publishing.artifactId
+ext.publishingInfo.pomName               =  ext.publishingInfo.artifactId
