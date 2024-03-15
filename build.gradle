@@ -32,7 +32,7 @@ repositories {
 dependencies {
 
     // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.1'
 
     implementation 'commons-collections:commons-collections:3.2.1'
     implementation 'commons-lang:commons-lang:2.4'
@@ -41,7 +41,7 @@ dependencies {
     implementation 'log4j:log4j:1.2.12'
     implementation 'javax.servlet:servlet-api:2.3'
     implementation 'logkit:logkit:2.0'
-    implementation 'ant:ant:1.6'
+    implementation 'ant:ant:1.10'
     implementation 'werken-xpath:werken-xpath:0.9.4'
 
 }
